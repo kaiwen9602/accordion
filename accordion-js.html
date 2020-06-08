@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        img {
+            display:block;
+            position:absolute;
+            left:-100px;
+            width: 300px;
+            height: 200px;
+            transition-duration: 0.3s;
+        }
+        .images01{
+            width:300px;
+            left:0;
+        }
+        .big-box>div{
+            float:left;
+            position: relative;
+            width: 50px;
+            height: 200px;
+            overflow: hidden;
+            transition-duration: 0.3s;
+        }
+        .big-box>div:nth-child(1){
+            width: 300px;
+        }
+        .big-box{
+            display:inline-block;
+            width: 450px;
+            height: 200px;
+            position: fixed;
+            top:0;
+            bottom:0;
+            left: 0;
+            right:0;
+            z-index: 2;
+            margin: auto;
+        }
+        #body-image-box{
+            position:absolute;
+            height:100vh;
+            width:100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 0;
+            filter: blur(5px);
+            background-image: url("images/the hobbit village.jpg");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="big-box">
+        <div id="box1">
+            <img class="images01" src="images/the hobbit village.jpg" alt="" width="900" height="597">
+        </div>
+        <div id="box2">
+            <img class="images02" src="images/polar light.jpeg" alt="" width="900" height="597">
+        </div>
+        <div id="box3">
+            <img class="images03" src="images/role.jpg" alt="" width="900" height="597">
+        </div>
+        <div id="box4">
+            <img class="images04" src="images/sunset glow.jpeg" alt="" width="900" height="597">
+        </div>  
+    </div>
+    <div id="body-image-box">
+    </div>
+    <script>
+        let obox1 = document.getElementById("box1");
+        let obox2 = document.getElementById("box2");
+        let obox3 = document.getElementById("box3");
+        let obox4 = document.getElementById("box4");
+        let window_box = document.getElementById("body-image-box")
+        obox1.onclick = function(){
+            obox1.style.width = '300px';
+            obox1.childNodes[1].style.left = "0";
+            obox2.style.width = "50px";
+            obox2.childNodes[1].style.left = "-100px";
+            obox3.style.width = "50px";
+            obox3.childNodes[1].style.left = "-100px";
+            obox4.style.width = "50px";
+            obox4.childNodes[1].style.left = "-100px";
+            window_box.style.backgroundImage= "url('images/the hobbit village.jpg')"
+        }
+        obox2.onclick = function(){
+            obox1.style.width = '50px';
+            obox1.childNodes[1].style.left = "-100px";
+            obox2.style.width = "300px";
+            obox2.childNodes[1].style.left = "0px";
+            obox3.style.width = "50px";
+            obox3.childNodes[1].style.left = "-100px";
+            obox4.style.width = "50px";
+            obox4.childNodes[1].style.left = "-100px";
+            window_box.style.backgroundImage= "url('images/polar light.jpeg')"
+        }
+        obox3.onclick = function(){
+            obox1.style.width = '50px';
+            obox1.childNodes[1].style.left = "-100px";
+            obox2.style.width = "50px";
+            obox2.childNodes[1].style.left = "-100px";
+            obox3.style.width = "300px";
+            obox3.childNodes[1].style.left = "0px";
+            obox4.style.width = "50px";
+            obox4.childNodes[1].style.left = "-100px";
+            window_box.style.backgroundImage= "url('images/role.jpg')"
+        }
+        obox4.onclick = function(){
+            obox1.style.width = '50px';
+            obox1.childNodes[1].style.left = "-100px";
+            obox2.style.width = "50px";
+            obox2.childNodes[1].style.left = "-100px";
+            obox3.style.width = "50px";
+            obox3.childNodes[1].style.left = "-100px";
+            obox4.style.width = "300px";
+            obox4.childNodes[1].style.left = "0px";
+            window_box.style.backgroundImage= "url('images/sunset glow.jpeg')"
+        }
+        
+    </script>
+</body>
+
+</html>
