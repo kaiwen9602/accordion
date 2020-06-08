@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: relative;
+            top: 100px;
+            width: 790px;
+            height: 340px;
+            margin: 0 auto;
+        }
+        input{
+            display:none;
+        }
+        img {
+            position: absolute;
+            opacity: 0;
+        }
+
+        #input01:checked~.images01 {
+            opacity: 1;
+        }
+        #input01:checked~.label-button>.label01{
+            background-image: radial-gradient(rgba(136, 130, 130, 0.8) 35%, rgba(255,255,255,0.7) 35%);
+        }
+        #input02:checked~.images02 {
+            opacity: 1;
+        }
+        #input02:checked~.label-button>.label02{
+            background-image: radial-gradient(rgba(136, 130, 130, 0.8) 35%, rgba(255,255,255,0.7) 35%);
+        }
+        #input03:checked~.images03 {
+            opacity: 1;
+        }
+        #input03:checked~.label-button>.label03{
+            background-image: radial-gradient(rgba(136, 130, 130, 0.8) 35%, rgba(255,255,255,0.7) 35%);
+        }
+        #input04:checked~.images04 {
+            opacity: 1;
+        }
+        #input04:checked~.label-button>.label04{
+            background-image: radial-gradient(rgba(136, 130, 130, 0.8) 35%, rgba(255,255,255,0.7) 35%);
+        }
+        #input05:checked~.images05 {
+            opacity: 1;
+        }
+        #input05:checked~.label-button>.label05{
+            background-image: radial-gradient(rgba(136, 130, 130, 0.8) 35%, rgba(255,255,255,0.7) 35%);
+        }
+        #input06:checked~.images06 {
+            opacity: 1;
+        }
+        #input06:checked~.label-button>.label06{
+            background-image: radial-gradient(rgba(136, 130, 130, 0.8) 35%, rgba(255,255,255,0.7) 35%);
+        }
+        label{
+            position:relative;
+            z-index: 3;
+            display:inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.7);
+        }
+        .label-button{
+            position:absolute;
+            bottom:0px;
+            left:0;
+            right:0;
+            margin:0 auto;
+            width: 300px;
+            height: 30px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input id="input01" type="radio" name="slide-button" checked>
+        <input id="input02" type="radio" name="slide-button">
+        <input id="input03" type="radio" name="slide-button">
+        <input id="input04" type="radio" name="slide-button">
+        <input id="input05" type="radio" name="slide-button">
+        <input id="input06" type="radio" name="slide-button">
+        <img class="images01" src="images/01.jpg" alt="01" width="790" height="340">
+        <img class="images02" src="images/02.jpg" alt="02" width="790" height="340">
+        <img class="images03" src="images/03.jpg" alt="03" width="790" height="340">
+        <img class="images04" src="images/04.jpg" alt="04" width="790" height="340">
+        <img class="images05" src="images/05.jpg" alt="05" width="790" height="340">
+        <img class="images06" src="images/06.jpg" alt="06" width="790" height="340">
+        <div class="label-button">
+            <label class="label01" for="input01"></label>
+            <label class="label02" for="input02"></label>
+            <label class="label03" for="input03"></label>
+            <label class="label04" for="input04"></label>
+            <label class="label05" for="input05"></label>
+            <label class="label06" for="input06"></label>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

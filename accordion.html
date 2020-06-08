@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        .main-box {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            margin: auto;
+            width: 450px;
+            height: 200px;
+            overflow: hidden;
+            box-shadow: 1px 1px 10px 2px grey;
+        }
+
+        .main-box img {
+            position: absolute;
+            left: -100px;
+            display: block;
+            width: 300px;
+            height: 200px;
+            transition-duration: 0.5s;
+        }
+
+        input {
+            display: none;
+        }
+
+        label {
+            position: absolute;
+            width: 50px;
+            height: 200px;
+            overflow: hidden;
+            transition-duration: 0.5s;
+        }
+
+        .label01 {
+            position: relative;
+            float: left;
+        }
+
+        .label02 {
+            position: relative;
+            float: left;
+        }
+
+        .label03 {
+            position: relative;
+            float: left;
+            z-index: 30;
+        }
+
+        .label04 {
+            position: relative;
+            float: left;
+        }
+
+        #input01:checked~.main-box>.label01 {
+            left: 0;
+            z-index: 5;
+            width: 300px;
+        }
+
+        #input01:checked~.main-box>.label01>.images01 {
+            left: 0;
+        }
+
+        #input02:checked~.main-box>.label02 {
+            width: 300px;
+            z-index: 5;
+        }
+
+        #input02:checked~.main-box>.label02>.images02 {
+            left: 0;
+        }
+
+        #input02:checked~.main-box>.label02 {
+            width: 300px;
+        }
+
+        #input03:checked~.main-box>.label03,
+        #input03:checked~.main-box>.label02 {
+            z-index: 5;
+        }
+
+        #input03:checked~.main-box>.label03>.images03 {
+            left: 0;
+        }
+
+        #input03:checked~.main-box>.label03 {
+            width: 300px;
+        }
+
+        #input04:checked~.main-box>.label04,
+        #input04:checked~.main-box>.label03,
+        #input04:checked~.main-box>.label02 {
+            z-index: 5;
+        }
+
+        #input04:checked~.main-box>.label04 {
+            width: 300px;
+        }
+
+        #input04:checked~.main-box>.label04>.images04 {
+            left: 0;
+        }
+        .window-box{
+            height:100vh;
+            width:100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 0;
+            filter: blur(5px);
+        }
+        #input01:checked~.window-box{
+            background-image: url("images/the hobbit village.jpg");
+        }
+        #input02:checked~.window-box{
+            background-image: url("images/polar light.jpeg");
+        }
+        #input03:checked~.window-box{
+            background-image: url("images/role.jpg");
+        }
+        #input04:checked~.window-box{
+            background-image: url("images/sunset glow.jpeg");
+        }
+    </style>
+</head>
+
+<body>
+    <input id="input01" type="radio" name="accordion-button" checked>
+    <input id="input02" type="radio" name="accordion-button">
+    <input id="input03" type="radio" name="accordion-button">
+    <input id="input04" type="radio" name="accordion-button">
+    
+    <div class="main-box">
+        <label class="label01" for="input01"> <img class="images01" src="images/the hobbit village.jpg" alt=""
+                width="900" height="597"> </label>
+        <label class="label02" for="input02"> <img class="images02" src="images/polar light.jpeg" alt="" width="900"
+                height="597"></label>
+        <label class="label03" for="input03"> <img class="images03" src="images/role.jpg" alt="" width="900"
+                height="597"> </label>
+        <label class="label04" for="input04"> <img class="images04" src="images/sunset glow.jpeg" alt="" width="900"
+                height="597"></label>
+    </div>
+    <div class="window-box"></div>
+
+</body>
+
+</html>
